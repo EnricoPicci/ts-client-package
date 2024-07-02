@@ -1,0 +1,30 @@
+{
+  "name": "ts-client-pkg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "mocha -r ts-node/register src/**/*.spec.ts src/**/**/*.spec.ts",
+    "tsc": "tsc --outDir dist",
+    "tsc-version": "tsc --version",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "prepublishOnly": "npm version patch",
+    "preversion": "npm run test",
+    "version": "npm run tsc && git add -A dist",
+    "postversion": "git push"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chai": "^4.3.16",
+    "@types/mocha": "^10.0.7",
+    "@types/node": "^20.14.9",
+    "chai": "^4.4.1",
+    "mocha": "^10.5.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3"
+  }
+}
