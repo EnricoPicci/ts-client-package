@@ -1,3 +1,3 @@
-import { functionFromPackage } from './package-core';
+import { Client } from './client';
 
-export { functionFromPackage };
+export { Client };
